@@ -6,13 +6,13 @@ class Solution {
         if(n==1){
             return 1;
         }
-        int a = 0;
-        int b=1;
+        int prevprev = 0;
+        int prev=1;
         int sum=0;
         for(int i=2;i<=n;i++){
-            sum=a+b;
-            a=b;
-            b=sum;
+            sum=prev+prevprev;
+            prevprev=prev;
+            prev=sum;
         }
         return sum;
     }
