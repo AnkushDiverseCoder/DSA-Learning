@@ -10,16 +10,22 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
+        // We will apply tortoise method to solve this problem.
+
+        // Step1:
         ListNode slow = head;
         ListNode fast = head;
-        while( fast.next !=null){
-            if(fast.next.next == null){
-                slow = slow.next;
-                break;
-            }
+
+        // Step2:
+        while(fast != null && fast.next != null)        //<<--Step4
+        {
+        
+            // Step3:
             slow = slow.next;
             fast = fast.next.next;
         }
+
         return slow;
+
     }
 }
