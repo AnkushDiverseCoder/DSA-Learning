@@ -8,12 +8,9 @@ class Solution {
             w1 += word1[i];
         }
 
-        // while loop
-        int i = 0;
-        while( i <= word2.length-1 ){
+        for(int i =0 ; i<word2.length; i++){
             // Body
-            w2+= word2[i];
-            i++;
+            w2 += word2[i];
         }
 
         return w1.equals(w2);
