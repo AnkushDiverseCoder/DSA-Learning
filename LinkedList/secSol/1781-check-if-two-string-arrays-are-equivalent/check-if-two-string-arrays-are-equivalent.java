@@ -1,15 +1,15 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        for(int i =1 ; i<word1.length; i++){
-            // Body
-            word1[0] += word1[i];
+       String str1="",str2="";
+        
+        for(String s:word1){
+            str1+=s;
         }
-
-        for(int i =1 ; i<word2.length; i++){
-            // Body
-            word2[0] += word2[i];
+        
+        for(String s:word2){
+            str2+=s;
         }
-
-        return  word1[0].equals(word2[0]);
+        
+        return str1.equals(str2);
     }
 }
