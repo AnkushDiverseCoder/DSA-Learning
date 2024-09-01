@@ -5,20 +5,16 @@ class Solution {
             return false;
         }
 
-        int[] arr = new int[26];
-
-        for(int i = 0; i<s.length();i++) {
-
-            arr[(s.charAt(i)+0)%97]+= 1;
-            arr[(t.charAt(i)+0)%97]-= 1;
+         int[] a = new int[26];
+        for (char c : s.toCharArray()) {
+            a[c - 'a']++;
         }
-
-        for(int i:arr){
-            if(i!=0){
-                return false;
-            }
-        } 
-
+        for (char c : t.toCharArray()) {
+            a[c - 'a']--;
+        }
+        for (int n : a) {
+            if (n != 0) return false;
+        }
         return true;
     }
 }
