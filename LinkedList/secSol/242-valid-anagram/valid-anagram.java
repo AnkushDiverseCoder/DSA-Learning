@@ -8,6 +8,7 @@ class Solution {
         int[] arr = new int[26];
 
         for(int i = 0; i<s.length();i++) {
+
             arr[(s.charAt(i)+0)%97]+= 1;
             arr[(t.charAt(i)+0)%97]-= 1;
         }
