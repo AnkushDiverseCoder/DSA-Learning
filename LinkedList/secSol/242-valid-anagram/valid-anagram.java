@@ -5,16 +5,19 @@ class Solution {
             return false;
         }
 
-         int[] a = new int[26];
-        for (char c : s.toCharArray()) {
-            a[c - 'a']++;
+        int[] arr = new int[26];
+
+        for(int i = 0; i<s.length();i++) {
+            arr[ s.charAt(i) - 'a' ]+= 1;
+            arr[ t.charAt(i)- 'a' ]-= 1;
         }
-        for (char c : t.toCharArray()) {
-            a[c - 'a']--;
-        }
-        for (int n : a) {
-            if (n != 0) return false;
-        }
+
+        for(int i:arr){
+            if(i!=0){
+                return false;
+            }
+        } 
+
         return true;
     }
 }
