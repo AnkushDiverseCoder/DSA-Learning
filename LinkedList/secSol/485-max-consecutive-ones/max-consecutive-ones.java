@@ -7,7 +7,9 @@ class Solution {
             if(nums[i] == 1 ){
                 count++;
             }else{
-               max = Math.max(count , max);
+               if(max < count ){
+                max = count;
+               }
                count =0;
             }
             i++;
